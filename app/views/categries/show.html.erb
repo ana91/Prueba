@@ -1,0 +1,29 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @categry.name %>
+</p>
+
+<p>
+  <strong>Descrpcion:</strong>
+  <%= @categry.descrpcion %>
+</p>
+
+<p>
+  <strong>Productos:</strong>
+  <ul>
+    <% @categry.products.each do |product| %>
+    <li><%= product.name %></li>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @categry.price %>
+</p>
+
+<%= link_to 'Edit', edit_categry_path(@categry) %> |
+<%= link_to 'Back', categries_path %>
